@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B4018181A5243C100769C47 /* choosePhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4018171A5243C100769C47 /* choosePhotoController.m */; };
+		0B40181B1A52459200769C47 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B40181A1A52459200769C47 /* AssetsLibrary.framework */; };
+		0B40181D1A52459A00769C47 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B40181C1A52459A00769C47 /* ImageIO.framework */; };
+		0B40181F1A5245A600769C47 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B40181E1A5245A600769C47 /* QuartzCore.framework */; };
+		0B4018211A5245AE00769C47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4018201A5245AE00769C47 /* UIKit.framework */; };
+		0B4018231A5245B900769C47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4018221A5245B900769C47 /* Foundation.framework */; };
+		0B4018251A5245C000769C47 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4018241A5245C000769C47 /* CoreGraphics.framework */; };
+		0BBCB4301A523D9F0042170F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCB42F1A523D9F0042170F /* main.m */; };
+		0BBCB4331A523D9F0042170F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCB4321A523D9F0042170F /* AppDelegate.m */; };
+		0BBCB4361A523D9F0042170F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCB4351A523D9F0042170F /* ViewController.m */; };
+		0BBCB4391A523D9F0042170F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BBCB4371A523D9F0042170F /* Main.storyboard */; };
+		0BBCB43B1A523D9F0042170F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BBCB43A1A523D9F0042170F /* Images.xcassets */; };
+		0BBCB43E1A523D9F0042170F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BBCB43C1A523D9F0042170F /* LaunchScreen.xib */; };
+		0BBCB44A1A523D9F0042170F /* AfterburnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCB4491A523D9F0042170F /* AfterburnerTests.m */; };
+		72E727DA86B2952B1C6BE0AD /* libPods-Afterburner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 643F1822165DDC1A038AD0A6 /* libPods-Afterburner.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0BBCB4441A523D9F0042170F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BBCB4221A523D9F0042170F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BBCB4291A523D9F0042170F;
+			remoteInfo = Afterburner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B4018161A5243C100769C47 /* choosePhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = choosePhotoController.h; path = ../choosePhotoController.h; sourceTree = "<group>"; };
+		0B4018171A5243C100769C47 /* choosePhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = choosePhotoController.m; path = ../choosePhotoController.m; sourceTree = "<group>"; };
+		0B40181A1A52459200769C47 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		0B40181C1A52459A00769C47 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		0B40181E1A5245A600769C47 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0B4018201A5245AE00769C47 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0B4018221A5245B900769C47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0B4018241A5245C000769C47 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0BBCB42A1A523D9F0042170F /* Afterburner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Afterburner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BBCB42E1A523D9F0042170F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BBCB42F1A523D9F0042170F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0BBCB4311A523D9F0042170F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0BBCB4321A523D9F0042170F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0BBCB4341A523D9F0042170F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0BBCB4351A523D9F0042170F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0BBCB4381A523D9F0042170F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0BBCB43A1A523D9F0042170F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0BBCB43D1A523D9F0042170F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		0BBCB4431A523D9F0042170F /* AfterburnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AfterburnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BBCB4481A523D9F0042170F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BBCB4491A523D9F0042170F /* AfterburnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AfterburnerTests.m; sourceTree = "<group>"; };
+		361B7215F719831749041EFE /* Pods-Afterburner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afterburner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Afterburner/Pods-Afterburner.debug.xcconfig"; sourceTree = "<group>"; };
+		43588EAE72452795A552760A /* Pods-Afterburner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afterburner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Afterburner/Pods-Afterburner.release.xcconfig"; sourceTree = "<group>"; };
+		643F1822165DDC1A038AD0A6 /* libPods-Afterburner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Afterburner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0BBCB4271A523D9F0042170F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B4018251A5245C000769C47 /* CoreGraphics.framework in Frameworks */,
+				0B4018231A5245B900769C47 /* Foundation.framework in Frameworks */,
+				0B4018211A5245AE00769C47 /* UIKit.framework in Frameworks */,
+				0B40181F1A5245A600769C47 /* QuartzCore.framework in Frameworks */,
+				0B40181D1A52459A00769C47 /* ImageIO.framework in Frameworks */,
+				0B40181B1A52459200769C47 /* AssetsLibrary.framework in Frameworks */,
+				72E727DA86B2952B1C6BE0AD /* libPods-Afterburner.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BBCB4401A523D9F0042170F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B4018191A5243CA00769C47 /* choosePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				0B4018161A5243C100769C47 /* choosePhotoController.h */,
+				0B4018171A5243C100769C47 /* choosePhotoController.m */,
+			);
+			name = choosePhoto;
+			sourceTree = "<group>";
+		};
+		0BBCB4211A523D9F0042170F = {
+			isa = PBXGroup;
+			children = (
+				0BBCB42C1A523D9F0042170F /* Afterburner */,
+				0BBCB4461A523D9F0042170F /* AfterburnerTests */,
+				0BBCB42B1A523D9F0042170F /* Products */,
+				4E31AD54BF0A8389ED170D72 /* Pods */,
+				E723D1F47BC45C579105B490 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0BBCB42B1A523D9F0042170F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0BBCB42A1A523D9F0042170F /* Afterburner.app */,
+				0BBCB4431A523D9F0042170F /* AfterburnerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0BBCB42C1A523D9F0042170F /* Afterburner */ = {
+			isa = PBXGroup;
+			children = (
+				0B4018191A5243CA00769C47 /* choosePhoto */,
+				0BBCB4311A523D9F0042170F /* AppDelegate.h */,
+				0BBCB4321A523D9F0042170F /* AppDelegate.m */,
+				0BBCB4341A523D9F0042170F /* ViewController.h */,
+				0BBCB4351A523D9F0042170F /* ViewController.m */,
+				0BBCB4371A523D9F0042170F /* Main.storyboard */,
+				0BBCB43A1A523D9F0042170F /* Images.xcassets */,
+				0BBCB43C1A523D9F0042170F /* LaunchScreen.xib */,
+				0BBCB42D1A523D9F0042170F /* Supporting Files */,
+			);
+			path = Afterburner;
+			sourceTree = "<group>";
+		};
+		0BBCB42D1A523D9F0042170F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BBCB42E1A523D9F0042170F /* Info.plist */,
+				0BBCB42F1A523D9F0042170F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0BBCB4461A523D9F0042170F /* AfterburnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0BBCB4491A523D9F0042170F /* AfterburnerTests.m */,
+				0BBCB4471A523D9F0042170F /* Supporting Files */,
+			);
+			path = AfterburnerTests;
+			sourceTree = "<group>";
+		};
+		0BBCB4471A523D9F0042170F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BBCB4481A523D9F0042170F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E31AD54BF0A8389ED170D72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				361B7215F719831749041EFE /* Pods-Afterburner.debug.xcconfig */,
+				43588EAE72452795A552760A /* Pods-Afterburner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E723D1F47BC45C579105B490 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B4018241A5245C000769C47 /* CoreGraphics.framework */,
+				0B4018221A5245B900769C47 /* Foundation.framework */,
+				0B4018201A5245AE00769C47 /* UIKit.framework */,
+				0B40181E1A5245A600769C47 /* QuartzCore.framework */,
+				0B40181C1A52459A00769C47 /* ImageIO.framework */,
+				0B40181A1A52459200769C47 /* AssetsLibrary.framework */,
+				643F1822165DDC1A038AD0A6 /* libPods-Afterburner.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0BBCB4291A523D9F0042170F /* Afterburner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BBCB44D1A523D9F0042170F /* Build configuration list for PBXNativeTarget "Afterburner" */;
+			buildPhases = (
+				D2E0B5AA7D968EB75774C076 /* Check Pods Manifest.lock */,
+				0BBCB4261A523D9F0042170F /* Sources */,
+				0BBCB4271A523D9F0042170F /* Frameworks */,
+				0BBCB4281A523D9F0042170F /* Resources */,
+				16F6F176CDEA05898242E15A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Afterburner;
+			productName = Afterburner;
+			productReference = 0BBCB42A1A523D9F0042170F /* Afterburner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0BBCB4421A523D9F0042170F /* AfterburnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BBCB4501A523D9F0042170F /* Build configuration list for PBXNativeTarget "AfterburnerTests" */;
+			buildPhases = (
+				0BBCB43F1A523D9F0042170F /* Sources */,
+				0BBCB4401A523D9F0042170F /* Frameworks */,
+				0BBCB4411A523D9F0042170F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BBCB4451A523D9F0042170F /* PBXTargetDependency */,
+			);
+			name = AfterburnerTests;
+			productName = AfterburnerTests;
+			productReference = 0BBCB4431A523D9F0042170F /* AfterburnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0BBCB4221A523D9F0042170F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = jimmyliu;
+				TargetAttributes = {
+					0BBCB4291A523D9F0042170F = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 235XB3N5MT;
+					};
+					0BBCB4421A523D9F0042170F = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 0BBCB4291A523D9F0042170F;
+					};
+				};
+			};
+			buildConfigurationList = 0BBCB4251A523D9F0042170F /* Build configuration list for PBXProject "Afterburner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0BBCB4211A523D9F0042170F;
+			productRefGroup = 0BBCB42B1A523D9F0042170F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0BBCB4291A523D9F0042170F /* Afterburner */,
+				0BBCB4421A523D9F0042170F /* AfterburnerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0BBCB4281A523D9F0042170F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BBCB4391A523D9F0042170F /* Main.storyboard in Resources */,
+				0BBCB43E1A523D9F0042170F /* LaunchScreen.xib in Resources */,
+				0BBCB43B1A523D9F0042170F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BBCB4411A523D9F0042170F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16F6F176CDEA05898242E15A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Afterburner/Pods-Afterburner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2E0B5AA7D968EB75774C076 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0BBCB4261A523D9F0042170F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BBCB4361A523D9F0042170F /* ViewController.m in Sources */,
+				0B4018181A5243C100769C47 /* choosePhotoController.m in Sources */,
+				0BBCB4331A523D9F0042170F /* AppDelegate.m in Sources */,
+				0BBCB4301A523D9F0042170F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BBCB43F1A523D9F0042170F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BBCB44A1A523D9F0042170F /* AfterburnerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BBCB4451A523D9F0042170F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BBCB4291A523D9F0042170F /* Afterburner */;
+			targetProxy = 0BBCB4441A523D9F0042170F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0BBCB4371A523D9F0042170F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BBCB4381A523D9F0042170F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0BBCB43C1A523D9F0042170F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BBCB43D1A523D9F0042170F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0BBCB44B1A523D9F0042170F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0BBCB44C1A523D9F0042170F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0BBCB44E1A523D9F0042170F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 361B7215F719831749041EFE /* Pods-Afterburner.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Afterburner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		0BBCB44F1A523D9F0042170F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43588EAE72452795A552760A /* Pods-Afterburner.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Afterburner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		0BBCB4511A523D9F0042170F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AfterburnerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Afterburner.app/Afterburner";
+			};
+			name = Debug;
+		};
+		0BBCB4521A523D9F0042170F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AfterburnerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Afterburner.app/Afterburner";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0BBCB4251A523D9F0042170F /* Build configuration list for PBXProject "Afterburner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BBCB44B1A523D9F0042170F /* Debug */,
+				0BBCB44C1A523D9F0042170F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BBCB44D1A523D9F0042170F /* Build configuration list for PBXNativeTarget "Afterburner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BBCB44E1A523D9F0042170F /* Debug */,
+				0BBCB44F1A523D9F0042170F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BBCB4501A523D9F0042170F /* Build configuration list for PBXNativeTarget "AfterburnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BBCB4511A523D9F0042170F /* Debug */,
+				0BBCB4521A523D9F0042170F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0BBCB4221A523D9F0042170F /* Project object */;
+}
