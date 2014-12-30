@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MWPhotoBrowser.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <Foundation/Foundation.h>
 
 
 @interface choosePhotoController : UIViewController<UITableViewDataSource, UITableViewDelegate>
