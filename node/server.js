@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 var port     = process.env.PORT || 8080; // set our port
 
 var mongoose   = require('mongoose');
-mongoose.connect('mongodb://node:node@novus.modulusmongo.net:27017/Iganiq8o'); // connect to our database
+mongoose.connect('mongodb://afterburner:password@dogen.mongohq.com:10097/afterburner'); // connect to our database
 var Card     = require('./app/models/card');
 
 // ROUTES FOR OUR API
