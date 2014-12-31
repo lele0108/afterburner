@@ -6,7 +6,7 @@ var express    = require('express');
 var bodyParser = require('body-parser');
 var app        = express();
 var morgan     = require('morgan');
-var sendgrid  = require('sendgrid')("process.env.SENDGRIDUSR", "process.env.SENDGRIDPSWD");
+var sendgrid  = require('sendgrid')(process.env.SENDGRIDUSR, process.env.SENDGRIDPSWD);
 
 // configure app
 app.use(morgan('dev')); // log requests to the console
