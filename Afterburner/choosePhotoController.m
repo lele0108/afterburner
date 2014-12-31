@@ -21,16 +21,95 @@
 @implementation choosePhotoController
 @synthesize photoTable = _photoTable;
 @synthesize selections = _selections;
+@synthesize titles = _titles;
+@synthesize desps = _desps;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.photoTable.dataSource = self;
+    CGRect newFrame = self.photoTable.tableHeaderView.frame;
+    newFrame.size.height = 44;
+    self.photoTable.tableHeaderView.frame = newFrame;
+    [self.photoTable setTableHeaderView:self.photoTable.tableHeaderView];
     self.photos = [[NSMutableArray alloc] init];
     self.thumbs = [[NSMutableArray alloc] init];
     self.selections = [[NSMutableArray alloc] init];
     
-    [[SVHTTPClient sharedClient] setBasePath:@"https://api.flickr.com/services/rest/"];
+    _titles = @[@"Recent Uploads",
+                  @"Editor Selections",
+                  @"Nature Photos",
+                  @"Urban Photos",
+                  @"Hipster Photos",
+                  @"Romatic Photos"];
     
+    _desps = @[@"A collection of recent uploads by random Flickr users on the internet.",
+                   @"A special selection of photos by our editors perfect for Valentine Cards.",
+                   @"Trees are green and roses are red.",
+                   @"Buildings are tall and so am I.",
+                   @"One word. Coffee.",
+                   @"Beauitiful scenes that invoke romantic memories and awe."];
+    
+}
+
+- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+    return self.photos.count;
+}
+
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
+    if (index < _thumbs.count)
+        return [_thumbs objectAtIndex:index];
+    return nil;
+}
+
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+    if (index < self.photos.count)
+        return [self.photos objectAtIndex:index];
+    return nil;
+}
+
+- (BOOL)photoBrowser:(MWPhotoBrowser *)photoBrowser isPhotoSelectedAtIndex:(NSUInteger)index {
+    return [[_selections objectAtIndex:index] boolValue];
+}
+
+- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index selectedChanged:(BOOL)selected {
+    [_selections replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:selected]];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return _titles.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"photoCell";
+    chooseMenuTableCells *cell = [tableView
+                              dequeueReusableCellWithIdentifier:CellIdentifier
+                              forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    long row = [indexPath row];
+    
+    cell.title.text = _titles[row];
+    cell.desp.text = _desps[row];
+    
+    NSLog(@"The code runs through here!");
+    return cell;
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"WTF!");
+    [[SVHTTPClient sharedClient] setBasePath:@"https://api.flickr.com/services/rest/"];
     NSDictionary *queryParams = @{@"method" : @"flickr.photos.getRecent",
                                   @"api_key" : API_KEY,
                                   @"extras" : @"url_l,url_sq",
@@ -71,28 +150,5 @@
 
 }
 
-- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
-    return self.photos.count;
-}
-
-- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
-    if (index < _thumbs.count)
-        return [_thumbs objectAtIndex:index];
-    return nil;
-}
-
-- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
-    if (index < self.photos.count)
-        return [self.photos objectAtIndex:index];
-    return nil;
-}
-
-- (BOOL)photoBrowser:(MWPhotoBrowser *)photoBrowser isPhotoSelectedAtIndex:(NSUInteger)index {
-    return [[_selections objectAtIndex:index] boolValue];
-}
-
-- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index selectedChanged:(BOOL)selected {
-    [_selections replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:selected]];
-}
 
 @end

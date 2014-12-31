@@ -20,4 +20,7 @@
 @property (nonatomic, strong) ALAssetsLibrary *assetLibrary;
 @property (nonatomic, strong) NSMutableArray *assets;
 
+@property (nonatomic, strong) NSArray *titles;
+@property (nonatomic, strong) NSArray *desps;
+
 @end

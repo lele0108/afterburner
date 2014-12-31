@@ -2,12 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hKY-U9-jKA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Choose Photo Controller-->
+        <!--Select Photo-->
         <scene sceneID="6aR-cZ-6wU">
             <objects>
-                <viewController id="gN7-ze-0gX" customClass="choosePhotoController" sceneMemberID="viewController">
+                <viewController title="Select Photo" id="gN7-ze-0gX" customClass="choosePhotoController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="auA-Ye-100"/>
                         <viewControllerLayoutGuide type="bottom" id="s1c-9X-T94"/>
@@ -19,32 +20,64 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4dM-7A-jFK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="7a8-lD-eDh"/>
+                                    <constraint firstAttribute="width" constant="400" id="Z9u-sy-oQ0"/>
+                                </constraints>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="xT8-Ow-JGc">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <searchBar contentMode="redraw" placeholder="Search Flickr" translatesAutoresizingMaskIntoConstraints="NO" id="qD4-ak-b33">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="euI-F0-MXU"/>
+                                                <constraint firstAttribute="width" constant="400" id="pdr-RH-aow"/>
+                                            </constraints>
                                             <textInputTraits key="textInputTraits"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="euI-F0-MXU"/>
+                                                    <exclude reference="pdr-RH-aow"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="euI-F0-MXU"/>
+                                                    <include reference="pdr-RH-aow"/>
+                                                </mask>
                                             </variation>
                                         </searchBar>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="qD4-ak-b33" firstAttribute="leading" secondItem="xT8-Ow-JGc" secondAttribute="leading" id="2Jz-rO-D4u"/>
+                                        <constraint firstItem="qD4-ak-b33" firstAttribute="top" secondItem="xT8-Ow-JGc" secondAttribute="top" id="hQQ-wX-bbi"/>
+                                        <constraint firstAttribute="trailing" secondItem="qD4-ak-b33" secondAttribute="trailing" id="veS-9J-OVC"/>
+                                    </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="qD4-ak-b33"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="2Jz-rO-D4u"/>
+                                            <exclude reference="hQQ-wX-bbi"/>
+                                            <exclude reference="veS-9J-OVC"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
                                         <mask key="subviews">
                                             <include reference="qD4-ak-b33"/>
                                         </mask>
+                                        <mask key="constraints">
+                                            <include reference="2Jz-rO-D4u"/>
+                                            <include reference="hQQ-wX-bbi"/>
+                                            <include reference="veS-9J-OVC"/>
+                                        </mask>
                                     </variation>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="96" id="qUy-R6-rPP" customClass="chooseMenuTableCells">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="96" id="qUy-R6-rPP" customClass="chooseMenuTableCells">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qUy-R6-rPP" id="XH0-VF-ypI">
@@ -65,7 +98,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="8" y="36" width="346" height="45"/>
+                                                        <rect key="frame" x="8" y="36" width="313" height="45"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -88,24 +121,52 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7a8-lD-eDh"/>
+                                        <exclude reference="Z9u-sy-oQ0"/>
+                                    </mask>
                                 </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7a8-lD-eDh"/>
+                                        <include reference="Z9u-sy-oQ0"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="gN7-ze-0gX" id="TOC-GK-8Ux"/>
+                                    <outlet property="delegate" destination="gN7-ze-0gX" id="NLh-Sv-pxg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="4dM-7A-jFK" secondAttribute="trailing" constant="-16" id="27v-1X-eDm"/>
+                            <constraint firstItem="4dM-7A-jFK" firstAttribute="leading" secondItem="0Pf-rN-j3J" secondAttribute="leadingMargin" constant="-16" id="b6E-Dw-o8k"/>
+                            <constraint firstItem="4dM-7A-jFK" firstAttribute="top" secondItem="auA-Ye-100" secondAttribute="bottom" constant="-64" id="fTX-Jy-TKg"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="4dM-7A-jFK"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="27v-1X-eDm"/>
+                                <exclude reference="b6E-Dw-o8k"/>
+                                <exclude reference="fTX-Jy-TKg"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="4dM-7A-jFK"/>
                             </mask>
+                            <mask key="constraints">
+                                <include reference="27v-1X-eDm"/>
+                                <include reference="b6E-Dw-o8k"/>
+                                <include reference="fTX-Jy-TKg"/>
+                            </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="4Xl-zU-Vfy"/>
+                    <navigationItem key="navigationItem" title="Select Photo" id="4Xl-zU-Vfy"/>
                     <connections>
                         <outlet property="photoTable" destination="4dM-7A-jFK" id="6V6-sH-zvs"/>
                     </connections>
