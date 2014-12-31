@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gN7-ze-0gX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hKY-U9-jKA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -13,6 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="s1c-9X-T94"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0Pf-rN-j3J">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4dM-7A-jFK">
@@ -72,11 +73,47 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="4Xl-zU-Vfy"/>
                     <connections>
                         <outlet property="photoTable" destination="4dM-7A-jFK" id="6V6-sH-zvs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKc-EW-Fsi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1195.5" y="331"/>
+        </scene>
+        <!--Photo Browser-->
+        <scene sceneID="LtV-gP-y0F">
+            <objects>
+                <viewController id="S1s-lk-4U0" customClass="MWPhotoBrowser" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="du4-BD-Bc0"/>
+                        <viewControllerLayoutGuide type="bottom" id="PbU-Un-SY6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7hi-HV-jlG">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6r-iV-3Nx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1929" y="331"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lvR-Jj-aCM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hKY-U9-jKA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rhd-O0-Nuw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gN7-ze-0gX" kind="relationship" relationship="rootViewController" id="ReH-0g-YD0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6h-ts-gg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="277.5" y="331"/>
         </scene>
