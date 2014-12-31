@@ -10,6 +10,7 @@
 #import "SDImageCache.h"
 #import "MWCommon.h"
 #import "SVHTTPRequest.h"
+#import "chooseMenuTableCells.h"
 
 #define API_KEY @"c0a46f8bf9dd54d3f2f2662ef84977d8"
 #define SECRET @"c95a269917cd4b9a"
@@ -19,11 +20,15 @@
 
 @implementation choosePhotoController
 @synthesize photoTable = _photoTable;
+@synthesize selections = _selections;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.photos = [[NSMutableArray alloc] init];
     self.thumbs = [[NSMutableArray alloc] init];
+    self.selections = [[NSMutableArray alloc] init];
+    
     [[SVHTTPClient sharedClient] setBasePath:@"https://api.flickr.com/services/rest/"];
     
     NSDictionary *queryParams = @{@"method" : @"flickr.photos.getRecent",
@@ -51,12 +56,12 @@
                                   browser.zoomPhotosToFill = YES; // Images that almost fill the screen will be initially zoomed to fill (defaults to YES)
                                   browser.alwaysShowControls = NO; // Allows to control whether the bars and controls are always visible or whether they fade away to show the photo full (defaults to NO)
                                   browser.enableGrid = YES; // Whether to allow the viewing of all the photo thumbnails on a grid (defaults to YES)
-                                  browser.startOnGrid = YES; // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
-                                  //browser.wantsFullScreenLayout = YES; // iOS 5 & 6 only: Decide if you want the photo browser full screen, i.e. whether the status bar is affected (defaults to YES)
-                                  
-                                  // Optionally set the current visible photo before displaying
-                                  
-                                  // Present
+                                  browser.startOnGrid =YES; // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
+                                  browser.wantsFullScreenLayout = YES; // iOS 5 & 6 only: Decide if you want the photo browser full screen, i.e. whether the status bar is affected (defaults to YES)
+                                  _selections = [NSMutableArray new];
+                                  for (int i = 0; i < self.photos.count; i++) {
+                                      [_selections addObject:[NSNumber numberWithBool:NO]];
+                                  }
                                   [self.navigationController pushViewController:browser animated:YES];
                                   //do stuff
                               } else {
@@ -82,5 +87,12 @@
     return nil;
 }
 
+- (BOOL)photoBrowser:(MWPhotoBrowser *)photoBrowser isPhotoSelectedAtIndex:(NSUInteger)index {
+    return [[_selections objectAtIndex:index] boolValue];
+}
+
+- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index selectedChanged:(BOOL)selected {
+    [_selections replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:selected]];
+}
 
 @end

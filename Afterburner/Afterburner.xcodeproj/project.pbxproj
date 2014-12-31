@@ -21,6 +21,7 @@
 		0BBCB43B1A523D9F0042170F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BBCB43A1A523D9F0042170F /* Images.xcassets */; };
 		0BBCB43E1A523D9F0042170F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BBCB43C1A523D9F0042170F /* LaunchScreen.xib */; };
 		0BBCB44A1A523D9F0042170F /* AfterburnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCB4491A523D9F0042170F /* AfterburnerTests.m */; };
+		0BEC05EB1A53A58C005F367C /* chooseMenuTableCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEC05EA1A53A58C005F367C /* chooseMenuTableCells.m */; };
 		72E727DA86B2952B1C6BE0AD /* libPods-Afterburner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 643F1822165DDC1A038AD0A6 /* libPods-Afterburner.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		0BBCB4431A523D9F0042170F /* AfterburnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AfterburnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BBCB4481A523D9F0042170F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BBCB4491A523D9F0042170F /* AfterburnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AfterburnerTests.m; sourceTree = "<group>"; };
+		0BEC05E91A53A58C005F367C /* chooseMenuTableCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chooseMenuTableCells.h; sourceTree = "<group>"; };
+		0BEC05EA1A53A58C005F367C /* chooseMenuTableCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chooseMenuTableCells.m; sourceTree = "<group>"; };
 		361B7215F719831749041EFE /* Pods-Afterburner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afterburner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Afterburner/Pods-Afterburner.debug.xcconfig"; sourceTree = "<group>"; };
 		43588EAE72452795A552760A /* Pods-Afterburner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afterburner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Afterburner/Pods-Afterburner.release.xcconfig"; sourceTree = "<group>"; };
 		643F1822165DDC1A038AD0A6 /* libPods-Afterburner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Afterburner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +94,8 @@
 			children = (
 				0B4018161A5243C100769C47 /* choosePhotoController.h */,
 				0B4018171A5243C100769C47 /* choosePhotoController.m */,
+				0BEC05E91A53A58C005F367C /* chooseMenuTableCells.h */,
+				0BEC05EA1A53A58C005F367C /* chooseMenuTableCells.m */,
 			);
 			name = choosePhoto;
 			sourceTree = "<group>";
@@ -319,6 +324,7 @@
 				0BBCB4361A523D9F0042170F /* ViewController.m in Sources */,
 				0B4018181A5243C100769C47 /* choosePhotoController.m in Sources */,
 				0BBCB4331A523D9F0042170F /* AppDelegate.m in Sources */,
+				0BEC05EB1A53A58C005F367C /* chooseMenuTableCells.m in Sources */,
 				0BBCB4301A523D9F0042170F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
