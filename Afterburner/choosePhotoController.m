@@ -27,12 +27,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.photoTable.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.photoTable.dataSource = self;
     CGRect newFrame = self.photoTable.tableHeaderView.frame;
     newFrame.size.height = 44;
     self.photoTable.tableHeaderView.frame = newFrame;
     [self.photoTable setTableHeaderView:self.photoTable.tableHeaderView];
     self.photos = [[NSMutableArray alloc] init];
+    self.queryParams = [[NSMutableDictionary alloc] init];
     self.thumbs = [[NSMutableArray alloc] init];
     self.selections = [[NSMutableArray alloc] init];
     
@@ -108,16 +110,95 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"WTF!");
+    switch (indexPath.row) {
+        case 0:  { //popular photos
+            NSDictionary *temp = @{@"method" : @"flickr.photos.getRecent",
+                                          @"api_key" : API_KEY,
+                                          @"extras" : @"url_l,url_sq",
+                                          @"format" : @"json",
+                                          @"nojsoncallback" : @"1"};
+            self.queryParams = [temp mutableCopy];
+            [self callFlickr];
+            break;
+        }
+        case 1: { //editor selections
+            NSDictionary *temp = @{@"method" : @"flickr.photos.search",
+                                 @"api_key" : API_KEY,
+                                 @"text" : @"valentine",
+                                 @"extras" : @"url_l,url_sq",
+                                 @"format" : @"json",
+                                 @"nojsoncallback" : @"1"};
+            self.queryParams = [temp mutableCopy];
+            [self callFlickr];
+            break;
+        }
+        case 2: { //nature photos
+            NSDictionary *temp = @{@"method" : @"flickr.photos.search",
+                                 @"api_key" : API_KEY,
+                                 @"text" : @"nature",
+                                 @"extras" : @"url_l,url_sq",
+                                 @"format" : @"json",
+                                 @"nojsoncallback" : @"1"};
+            self.queryParams = [temp mutableCopy];
+            [self callFlickr];
+            break;
+        }
+        case 3: { //urban photos
+            NSDictionary *temp = @{@"method" : @"flickr.photos.search",
+                                 @"api_key" : API_KEY,
+                                 @"text" : @"urban",
+                                 @"extras" : @"url_l,url_sq",
+                                 @"format" : @"json",
+                                 @"nojsoncallback" : @"1"};
+            self.queryParams = [temp mutableCopy];
+            [self callFlickr];
+            break;
+        }
+        case 4: { //hipster photos
+            NSDictionary *temp = @{@"method" : @"flickr.photos.search",
+                                 @"text" : @"coffee",
+                                 @"api_key" : API_KEY,
+                                 @"extras" : @"url_l,url_sq",
+                                 @"format" : @"json",
+                                 @"nojsoncallback" : @"1"};
+            self.queryParams = [temp mutableCopy];
+            [self callFlickr];
+            break;
+        }
+        case 5: { //romantic photos
+            NSDictionary *temp = @{@"method" : @"flickr.photos.search",
+                                 @"text" : @"romantic",
+                                 @"api_key" : API_KEY,
+                                 @"extras" : @"url_l,url_sq",
+                                 @"format" : @"json",
+                                 @"nojsoncallback" : @"1"};
+            self.queryParams = [temp mutableCopy];
+            [self callFlickr];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSDictionary *temp = @{@"method" : @"flickr.photos.search",
+                           @"api_key" : API_KEY,
+                           @"text" : searchBar.text,
+                           @"extras" : @"url_l,url_sq",
+                           @"format" : @"json",
+                           @"nojsoncallback" : @"1"};
+    self.queryParams = [temp mutableCopy];
+    [self.view endEditing:YES];
+    [self callFlickr];
+}
+
+-(void)callFlickr {
+    [self.photos removeAllObjects];
+    [self.thumbs removeAllObjects];
     [[SVHTTPClient sharedClient] setBasePath:@"https://api.flickr.com/services/rest/"];
-    NSDictionary *queryParams = @{@"method" : @"flickr.photos.getRecent",
-                                  @"api_key" : API_KEY,
-                                  @"extras" : @"url_l,url_sq",
-                                  @"format" : @"json",
-                                  @"nojsoncallback" : @"1"};
-    
     [[SVHTTPClient sharedClient] GET:@""
-                          parameters:queryParams
+                          parameters:self.queryParams
                           completion:^(id response, NSHTTPURLResponse *urlResponse, NSError *error) {
                               if (!error) {
                                   NSArray *temp = response[@"photos"][@"photo"];
@@ -149,6 +230,7 @@
                           }];
 
 }
+
 
 
 @end

@@ -47,6 +47,9 @@
                                                     <include reference="pdr-RH-aow"/>
                                                 </mask>
                                             </variation>
+                                            <connections>
+                                                <outlet property="delegate" destination="gN7-ze-0gX" id="pNy-ID-Oei"/>
+                                            </connections>
                                         </searchBar>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

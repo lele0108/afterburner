@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSMutableArray *selections;
 @property (nonatomic, strong) ALAssetsLibrary *assetLibrary;
 @property (nonatomic, strong) NSMutableArray *assets;
+@property (nonatomic, strong) NSMutableDictionary *queryParams;
 
 @property (nonatomic, strong) NSArray *titles;
 @property (nonatomic, strong) NSArray *desps;
