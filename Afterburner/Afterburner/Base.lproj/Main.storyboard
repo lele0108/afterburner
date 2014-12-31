@@ -178,24 +178,6 @@
             </objects>
             <point key="canvasLocation" x="1195.5" y="331"/>
         </scene>
-        <!--Photo Browser-->
-        <scene sceneID="LtV-gP-y0F">
-            <objects>
-                <viewController storyboardIdentifier="photoselector" id="S1s-lk-4U0" customClass="MWPhotoBrowser" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="du4-BD-Bc0"/>
-                        <viewControllerLayoutGuide type="bottom" id="PbU-Un-SY6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7hi-HV-jlG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y6r-iV-3Nx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1929" y="331"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="lvR-Jj-aCM">
             <objects>

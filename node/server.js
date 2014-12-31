@@ -6,6 +6,7 @@ var express    = require('express');
 var bodyParser = require('body-parser');
 var app        = express();
 var morgan     = require('morgan');
+var sendgrid  = require('sendgrid')("process.env.SENDGRIDUSR", "process.env.SENDGRIDPSWD");
 
 // configure app
 app.use(morgan('dev')); // log requests to the console
@@ -52,13 +53,23 @@ router.route('/card')
 		card.photoURL = req.body.photoURL;
 		card.senderEmail = req.body.senderEmail;
 		card.userEmail = req.body.userEmail;
-
 		
 		card.save(function(err) {
 			if (err)
 				res.send(err);
 
+
+			  console.log(card.senderEmail);
+		sendgrid.send({
+			  to:       card.userEmail,
+			  from:     card.senderEmail,
+			  subject:  'This is a test email from Sendgrid to test',
+			  text:     card.text
+			}, function(err, json) {
+			  if (err) { return console.error(err); }
+			  console.log(json);
 			res.json({ message: 'Card created!' });
+			});
 		});
 
 		
