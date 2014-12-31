@@ -1,0 +1,17 @@
+{
+  "name": "Afterburner",
+  "version": "0.0.1",
+  "description": "Afterburner app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Jimmy Liu",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.10.6",
+    "morgan": "~1.0.0",
+    "mongoose": "~3.6.13",
+    "body-parser": "~1.0.1"
+  }
+}
