@@ -127,6 +127,7 @@
                                  @"text" : @"valentine",
                                  @"extras" : @"url_l,url_sq",
                                  @"format" : @"json",
+                                 @"media" : @"photos",
                                  @"nojsoncallback" : @"1"};
             self.queryParams = [temp mutableCopy];
             [self callFlickr];
@@ -138,6 +139,7 @@
                                  @"text" : @"nature",
                                  @"extras" : @"url_l,url_sq",
                                  @"format" : @"json",
+                                 @"media" : @"photos",
                                  @"nojsoncallback" : @"1"};
             self.queryParams = [temp mutableCopy];
             [self callFlickr];
@@ -149,6 +151,7 @@
                                  @"text" : @"urban",
                                  @"extras" : @"url_l,url_sq",
                                  @"format" : @"json",
+                                 @"media" : @"photos",
                                  @"nojsoncallback" : @"1"};
             self.queryParams = [temp mutableCopy];
             [self callFlickr];
@@ -160,6 +163,7 @@
                                  @"api_key" : API_KEY,
                                  @"extras" : @"url_l,url_sq",
                                  @"format" : @"json",
+                                 @"media" : @"photos",
                                  @"nojsoncallback" : @"1"};
             self.queryParams = [temp mutableCopy];
             [self callFlickr];
@@ -171,6 +175,7 @@
                                  @"api_key" : API_KEY,
                                  @"extras" : @"url_l,url_sq",
                                  @"format" : @"json",
+                                 @"media" : @"photos",
                                  @"nojsoncallback" : @"1"};
             self.queryParams = [temp mutableCopy];
             [self callFlickr];
@@ -194,6 +199,10 @@
 }
 
 -(void)callFlickr {
+    
+    for (id object in self.selections) {
+        NSLog(@"Value of hello = %@", object);
+    }
     [self.photos removeAllObjects];
     [self.thumbs removeAllObjects];
     [[SVHTTPClient sharedClient] setBasePath:@"https://api.flickr.com/services/rest/"];
@@ -204,15 +213,17 @@
                                   NSArray *temp = response[@"photos"][@"photo"];
                                   for (id object in temp) {
                                       NSDictionary *photodata = object;
-                                      [self.photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:photodata[@"url_l"]]]];
-                                      [self.thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:photodata[@"url_sq"]]]];
+                                      if (photodata[@"url_l"] != nil) {
+                                          [self.photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:photodata[@"url_l"]]]];
+                                          [self.thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:photodata[@"url_sq"]]]];
+                                      }
                                   }
                                   MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
                                   
                                   // Set options
                                   browser.displayActionButton = NO; // Show action button to allow sharing, copying, etc (defaults to YES)
                                   browser.displayNavArrows = NO; // Whether to display left and right nav arrows on toolbar (defaults to NO)
-                                  browser.displaySelectionButtons = YES; // Whether selection buttons are shown on each image (defaults to NO)
+                                  browser.displaySelectionButtons = NO; // Whether selection buttons are shown on each image (defaults to NO)
                                   browser.zoomPhotosToFill = YES; // Images that almost fill the screen will be initially zoomed to fill (defaults to YES)
                                   browser.alwaysShowControls = NO; // Allows to control whether the bars and controls are always visible or whether they fade away to show the photo full (defaults to NO)
                                   browser.enableGrid = YES; // Whether to allow the viewing of all the photo thumbnails on a grid (defaults to YES)

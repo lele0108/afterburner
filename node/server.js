@@ -39,11 +39,9 @@ router.get('/', function(req, res) {
 	res.json({ message: 'hooray! welcome to our api!' });	
 });
 
-// on routes that end in /bears
-// ----------------------------------------------------
 router.route('/card')
 
-	// create a bear (accessed at POST http://localhost:8080/bears)
+
 	.post(function(req, res) {
 		
 		var card = new Card();		// create a new instance of the Bear model
@@ -75,8 +73,6 @@ router.route('/card')
 		
 	})
 
-// on routes that end in /bears/:bear_id
-// ----------------------------------------------------
 router.route('/card/:cardID')
 
 	// get the bear with that id
@@ -89,10 +85,7 @@ router.route('/card/:cardID')
 	})
 
 
-// REGISTER OUR ROUTES -------------------------------
 app.use('/api', router);
 
-// START THE SERVER
-// =============================================================================
 app.listen(port);
 console.log('Magic happens on port ' + port);

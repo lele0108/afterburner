@@ -1062,9 +1062,11 @@
     NSUInteger numberOfPhotos = [self numberOfPhotos];
     if (_gridController) {
         if (_gridController.selectionMode) {
-            self.title = NSLocalizedString(@"Select Photos", nil);
+            self.title = NSLocalizedString(@"Select Photo", nil);
+            self.navigationItem.rightBarButtonItem = nil;
         } else {
             NSString *photosText;
+            self.navigationItem.rightBarButtonItem = nil;
             if (numberOfPhotos == 1) {
                 photosText = NSLocalizedString(@"photo", @"Used in the context: '1 photo'");
             } else {
@@ -1073,6 +1075,8 @@
             self.title = [NSString stringWithFormat:@"%lu %@", (unsigned long)numberOfPhotos, photosText];
         }
     } else if (numberOfPhotos > 1) {
+        UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Select" style:UIBarButtonItemStylePlain target:self action:@selector(refreshPropertyList:)];
+        self.navigationItem.rightBarButtonItem = anotherButton;
         if ([_delegate respondsToSelector:@selector(photoBrowser:titleForPhotoAtIndex:)]) {
             self.title = [_delegate photoBrowser:self titleForPhotoAtIndex:_currentPageIndex];
         } else {
