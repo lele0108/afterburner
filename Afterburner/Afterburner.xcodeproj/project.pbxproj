@@ -14,6 +14,7 @@
 		0B4018211A5245AE00769C47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4018201A5245AE00769C47 /* UIKit.framework */; };
 		0B4018231A5245B900769C47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4018221A5245B900769C47 /* Foundation.framework */; };
 		0B4018251A5245C000769C47 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4018241A5245C000769C47 /* CoreGraphics.framework */; };
+		0B6B691C1A5795F60056F144 /* userInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B691B1A5795F60056F144 /* userInfoController.m */; };
 		0BBCB4301A523D9F0042170F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCB42F1A523D9F0042170F /* main.m */; };
 		0BBCB4331A523D9F0042170F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCB4321A523D9F0042170F /* AppDelegate.m */; };
 		0BBCB4361A523D9F0042170F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCB4351A523D9F0042170F /* ViewController.m */; };
@@ -23,6 +24,7 @@
 		0BBCB44A1A523D9F0042170F /* AfterburnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCB4491A523D9F0042170F /* AfterburnerTests.m */; };
 		0BEC05EB1A53A58C005F367C /* chooseMenuTableCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEC05EA1A53A58C005F367C /* chooseMenuTableCells.m */; };
 		0BFCBD541A5508260015C2D3 /* FullSizeRender.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BFCBD531A5508260015C2D3 /* FullSizeRender.jpg */; };
+		0BFCBD571A5511A20015C2D3 /* editPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFCBD561A5511A20015C2D3 /* editPhotoController.m */; };
 		72E727DA86B2952B1C6BE0AD /* libPods-Afterburner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 643F1822165DDC1A038AD0A6 /* libPods-Afterburner.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		0B4018201A5245AE00769C47 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0B4018221A5245B900769C47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0B4018241A5245C000769C47 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0B6B691A1A5795F60056F144 /* userInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userInfoController.h; sourceTree = "<group>"; };
+		0B6B691B1A5795F60056F144 /* userInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userInfoController.m; sourceTree = "<group>"; };
 		0BBCB42A1A523D9F0042170F /* Afterburner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Afterburner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BBCB42E1A523D9F0042170F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BBCB42F1A523D9F0042170F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		0BEC05E91A53A58C005F367C /* chooseMenuTableCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chooseMenuTableCells.h; sourceTree = "<group>"; };
 		0BEC05EA1A53A58C005F367C /* chooseMenuTableCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chooseMenuTableCells.m; sourceTree = "<group>"; };
 		0BFCBD531A5508260015C2D3 /* FullSizeRender.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FullSizeRender.jpg; path = ../../../../../Downloads/FullSizeRender.jpg; sourceTree = "<group>"; };
+		0BFCBD551A5511A20015C2D3 /* editPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editPhotoController.h; sourceTree = "<group>"; };
+		0BFCBD561A5511A20015C2D3 /* editPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editPhotoController.m; sourceTree = "<group>"; };
 		361B7215F719831749041EFE /* Pods-Afterburner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afterburner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Afterburner/Pods-Afterburner.debug.xcconfig"; sourceTree = "<group>"; };
 		43588EAE72452795A552760A /* Pods-Afterburner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afterburner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Afterburner/Pods-Afterburner.release.xcconfig"; sourceTree = "<group>"; };
 		643F1822165DDC1A038AD0A6 /* libPods-Afterburner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Afterburner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +141,10 @@
 				0BBCB43A1A523D9F0042170F /* Images.xcassets */,
 				0BBCB43C1A523D9F0042170F /* LaunchScreen.xib */,
 				0BBCB42D1A523D9F0042170F /* Supporting Files */,
+				0BFCBD551A5511A20015C2D3 /* editPhotoController.h */,
+				0BFCBD561A5511A20015C2D3 /* editPhotoController.m */,
+				0B6B691A1A5795F60056F144 /* userInfoController.h */,
+				0B6B691B1A5795F60056F144 /* userInfoController.m */,
 			);
 			path = Afterburner;
 			sourceTree = "<group>";
@@ -327,8 +337,10 @@
 			files = (
 				0BBCB4361A523D9F0042170F /* ViewController.m in Sources */,
 				0B4018181A5243C100769C47 /* choosePhotoController.m in Sources */,
+				0B6B691C1A5795F60056F144 /* userInfoController.m in Sources */,
 				0BBCB4331A523D9F0042170F /* AppDelegate.m in Sources */,
 				0BEC05EB1A53A58C005F367C /* chooseMenuTableCells.m in Sources */,
+				0BFCBD571A5511A20015C2D3 /* editPhotoController.m in Sources */,
 				0BBCB4301A523D9F0042170F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,8 @@
 #import "MWPhotoBrowser.h"
 #import "MWPhotoBrowserPrivate.h"
 #import "SDImageCache.h"
+//#import "editPhotoController.h"
+//#import "editPhotoController.h"
 
 #define PADDING                  10
 #define ACTION_SHEET_OLD_ACTIONS 2000
@@ -1075,7 +1077,7 @@
             self.title = [NSString stringWithFormat:@"%lu %@", (unsigned long)numberOfPhotos, photosText];
         }
     } else if (numberOfPhotos > 1) {
-        UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Select" style:UIBarButtonItemStylePlain target:self action:@selector(refreshPropertyList:)];
+        UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Select" style:UIBarButtonItemStylePlain target:self action:@selector(btnClicked:)];
         self.navigationItem.rightBarButtonItem = anotherButton;
         if ([_delegate respondsToSelector:@selector(photoBrowser:titleForPhotoAtIndex:)]) {
             self.title = [_delegate photoBrowser:self titleForPhotoAtIndex:_currentPageIndex];
@@ -1091,6 +1093,12 @@
 	_nextButton.enabled = (_currentPageIndex < numberOfPhotos - 1);
     _actionButton.enabled = [[self photoAtIndex:_currentPageIndex] underlyingImage] != nil;
 	
+}
+
+-(void) btnClicked:(id)sender {
+    //editPhotoController *myController = (editPhotoController *)[self.navigationController.viewControllers objectAtIndex:0];
+    //myController.photoModel = _venues[indexPath.row];
+    //[self.navigationController popToViewController:myController animated:YES];
 }
 
 - (void)jumpToPageAtIndex:(NSUInteger)index animated:(BOOL)animated {

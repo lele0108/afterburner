@@ -237,6 +237,7 @@
                                   //do stuff
                               } else {
                                   NSLog(@"%@", @"There was a error with the API call");
+                                  NSLog(@"Value of hello = %@", error);
                               }
                           }];
 
