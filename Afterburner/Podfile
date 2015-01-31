@@ -4,7 +4,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'Afterburner' do
-pod 'MWPhotoBrowser'
 pod 'SVHTTPRequest', :head
 
 end
